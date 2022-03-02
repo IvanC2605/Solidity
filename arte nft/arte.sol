@@ -13,7 +13,7 @@ contract ArtToken is ERC721, Ownable{
     //token counter
     uint256 COUNTER;
 
-    //CUANOT COBRAR
+    //CUANTO COBRAR
     uint fee = 5 ether;
 
     //data structure with the properties of the artwork
@@ -56,7 +56,7 @@ contract ArtToken is ERC721, Ownable{
         uint SC_money =address(this).balance/10**18;
         return (SC_Address, SC_money);
     }
-    //obtener todos los nft tokens que tien ecada usuario
+    //obtener todos los nft tokens que tiene cada usuario
     function getartwortks() public view returns (art [] memory){
         return art_works;
     }
@@ -80,7 +80,7 @@ contract ArtToken is ERC721, Ownable{
        require (msg.value >= fee); 
        _createartwork(_name);
     }
-    //extraccion de ether dle smart contrtact
+    //extraccion de ether deL smart contrtact
     function withdraw() external payable onlyOwner{
         address payable _owner = payable(owner());
         _owner.transfer(address(this).balance);
