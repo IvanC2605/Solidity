@@ -1,0 +1,3 @@
+Creacion del codigo base de un proeycto nft funcional con opciones de programar nombre
+y abreviatura de la moneda, precio del nft, subir nivel del mismo, la creacion y otras
+demas opciones
